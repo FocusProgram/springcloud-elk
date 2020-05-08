@@ -10,7 +10,7 @@ import java.util.Date;
  * @Date: 2020/5/8 15:05
  * @Description:
  */
-@Document(indexName = "goods", type = "goods")
+@Document(indexName = "product", type = "product")
 @Data
 public class ProductEntity {
     /**

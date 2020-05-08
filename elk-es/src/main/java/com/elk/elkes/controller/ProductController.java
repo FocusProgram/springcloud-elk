@@ -5,10 +5,7 @@ import com.elk.elkes.service.ProductSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
@@ -25,7 +22,7 @@ public class ProductController {
 
     @PostMapping("search")
     public List<ProductEntity> search(@RequestParam("name")String name){
-        Pageable pageable = new PageRequest(0,10);
+        Pageable pageable = PageRequest.of(0,10);
         return productSearchService.search(name, pageable);
     }
 }
