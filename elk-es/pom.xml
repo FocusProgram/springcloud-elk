@@ -36,11 +36,11 @@
         </dependency>
 
         <!-- elk+kafka -->
-<!--        <dependency>-->
-<!--            <groupId>com.elk</groupId>-->
-<!--            <artifactId>elk-kafka</artifactId>-->
-<!--            <version>0.0.1-SNAPSHOT</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.elk</groupId>
+            <artifactId>elk-kafka</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
         <dependency>
             <groupId>com.qywk.cache</groupId>
