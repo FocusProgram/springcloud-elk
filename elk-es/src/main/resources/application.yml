@@ -12,5 +12,20 @@ spring:
   kafka:
     bootstrap-servers: 192.168.80.130:9092
 
+  redis:
+    host: 114.55.34.44
+    port: 6379
+    password: root
+    timeout: 2000
+    jedis:
+      pool:
+        maxActive: 300
+        maxIdle: 100
+        maxWait: 1000
+    # 服务或应用名
+    sysName: qywk-admin
+    enable: true
+    database: 0
+
 kafka:
   topic: my_log
