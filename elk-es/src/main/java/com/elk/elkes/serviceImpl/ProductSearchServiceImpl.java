@@ -26,7 +26,6 @@ public class ProductSearchServiceImpl implements ProductSearchService {
 
     @Override
     public List<ProductEntity> search(String name, @PageableDefault(page = 0, value = 10) Pageable pageable) {
-        // int i = 1 / 0;
 //        String user = null;
 //        System.out.println(user.getBytes());
         // 1.拼接查询条件

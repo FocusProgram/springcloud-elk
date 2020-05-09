@@ -23,7 +23,7 @@ public class KafkaSender<T> {
     private KafkaTemplate<String, Object> kafkaTemplate;
 
     @Value("${kafka.topic}")
-    private String kafkaTopic;
+    public String kafkaTopic;
 
     /**
      * kafka 发送消息

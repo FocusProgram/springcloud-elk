@@ -1,2 +1,5 @@
+server:
+  port: 8000
+
 kafka:
   topic: my_log

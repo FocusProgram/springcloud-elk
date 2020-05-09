@@ -3,6 +3,7 @@ package com.elk.elkes.entity;
 import lombok.Data;
 import org.elasticsearch.cluster.metadata.MappingMetaData;
 import org.springframework.data.elasticsearch.annotations.Document;
+
 import java.util.Date;
 
 /**

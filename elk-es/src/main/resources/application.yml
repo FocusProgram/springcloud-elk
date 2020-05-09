@@ -9,6 +9,8 @@ spring:
       # 指定elasticsearch集群地址
       cluster-name: elasticsearch-cluster
       cluster-nodes: 192.168.80.130:9300
-    kafka:
-      # 指定kafka地址
-      bootstrap-servers: 192.168.80.130:9092
+  kafka:
+    bootstrap-servers: 192.168.80.130:9092
+
+kafka:
+  topic: my_log
