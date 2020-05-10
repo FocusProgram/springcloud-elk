@@ -1,12 +1,14 @@
 package com.elk.elkes;
 
-import com.qywk.cache.EnableQywkCache;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 
-@EnableQywkCache
+//@EnableElk
+//@EnableCache
 @SpringBootApplication
+@ComponentScan(basePackages = {"com.elk.elkes", "com.elk.elkkafka", "com.elk.elkcache"})
 @EnableElasticsearchRepositories(basePackages = {"com.elk.elkes"})
 public class ElkEsApplication {
 

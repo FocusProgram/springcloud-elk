@@ -23,7 +23,7 @@ spring:
         maxIdle: 100
         maxWait: 1000
     # 服务或应用名
-    sysName: qywk-admin
+    sysName: admin
     enable: true
     database: 0
 

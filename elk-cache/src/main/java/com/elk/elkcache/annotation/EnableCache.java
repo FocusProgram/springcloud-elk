@@ -1,6 +1,6 @@
-package com.elk.elkkafka.annotation;
+package com.elk.elkcache.annotation;
 
-import com.elk.elkkafka.AutoConfiguration;
+import com.elk.elkcache.AutoConfiguration;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.*;
@@ -10,6 +10,5 @@ import java.lang.annotation.*;
 @Import(AutoConfiguration.class)
 @Documented
 @Inherited
-public @interface EnableElk {
-
+public @interface EnableCache {
 }
