@@ -31,4 +31,4 @@ mvnw*
 
 ### VS Code ###
 .vscode/
-rebel.xml
+rebel*.xml
