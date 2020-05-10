@@ -1,0 +1,28 @@
+version: '3'
+services:
+  kafka:
+    image: wurstmeister/kafka
+    container_name: kafka
+    restart: always
+    environment:
+      #- KAFKA_BROKER_ID=0
+      #- KAFKA_ZOOKEEPER_CONNECT=192.168.80.130:2181
+      #- KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://192.168.80.130:9092
+      #- KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://192.168.80.130:9092
+      KAFKA_ZOOKEEPER_CONNECT: 192.168.80.130:2181
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+      KAFKA_DELETE_TOPIC_ENABLE: "true"
+      KAFKA_BROKER_ID: 0
+    networks:
+      default:
+        ipv4_address: 172.20.0.7
+    ports:
+      - 9092:9092
+    external_links:
+      - zookeeper:zookeeper
+        
+networks:
+  default:
+    external:
+      name: elk-kafka-network

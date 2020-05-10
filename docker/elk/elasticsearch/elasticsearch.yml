@@ -1,0 +1,32 @@
+version: '3'
+services:
+  elasticsearch:
+    image: elasticsearch
+    container_name: elasticsearch
+    restart: always
+    networks:
+      default:
+        ipv4_address: 172.30.0.2
+    ports:
+      - 9200:9200
+      - 9300:9300
+    volumes:
+      - ./es.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./plugins:/usr/share/elasticsearch/plugins 
+
+  elasticsearch-head:
+    image: mobz/elasticsearch-head:5
+    container_name: elasticsearch-head
+    restart: always
+    networks:
+      default:
+        ipv4_address: 172.30.0.3
+    ports:
+      - 9100:9100
+    links:
+      - elasticsearch:elasticsearch
+
+networks:
+  default:
+    external:
+      name: elk-network

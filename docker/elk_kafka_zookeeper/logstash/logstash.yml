@@ -1,0 +1,27 @@
+version: '3'
+services:
+  logstash:
+    image: logstash
+    container_name: logstash 
+    restart: always
+    networks:
+      default:
+        ipv4_address: 172.20.0.4
+    ports:
+      - 5044:5044
+      - 4560:4560
+      - 8080:8080
+    volumes:
+      - ./data:/data
+      - ./config:/config
+      - ./logs/tomcat.logs:/tomcat.logs
+      - ./patterns:/opt/logstash/patterns
+      - ./mysql/mysql-connector-java-5.1.46.jar:/mysql-connector-java-5.1.46.jar
+    external_links:
+      - elasticsearch:elasticsearch
+    command: bash -c "chmod +x /data && logstash -f logstash_kafka.conf --path.data=/data"
+        
+networks:
+  default:
+    external:
+      name: elk-kafka-network

@@ -1,0 +1,1 @@
+docker network create --driver=bridge --subnet=172.30.0.1/16 elk-network

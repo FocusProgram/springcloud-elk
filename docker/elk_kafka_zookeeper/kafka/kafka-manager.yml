@@ -1,0 +1,19 @@
+version: '3'
+services:
+  kafka-manager:
+    image: sheepkiller/kafka-manager
+    container_name: kafka-manager 
+    restart: always
+    environment:
+      #- ZK_HOSTS=172.20.0.6:2181
+      ZK_HOSTS: 172.20.0.6:2181
+    networks:
+      default:
+        ipv4_address: 172.20.0.8
+    ports:
+      - 9000:9000
+
+networks:
+  default:
+    external:
+      name: elk-kafka-network

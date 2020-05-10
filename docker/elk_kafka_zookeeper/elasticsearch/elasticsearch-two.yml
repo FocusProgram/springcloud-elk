@@ -1,0 +1,20 @@
+version: '3'
+services:
+  elasticsearch-two:
+    image: elasticsearch
+    container_name: elasticsearch-two
+    restart: always
+    networks:
+      default:
+        ipv4_address: 172.20.0.3
+    ports:
+      - 9202:9202
+      - 9303:9303
+    volumes:
+      - ./es-two.yml:/usr/share/elasticsearch/config/elasticsearch.yml  
+      - ./plugins-two:/usr/share/elasticsearch/plugins
+
+networks:
+  default:
+    external:
+      name: elk-kafka-network
