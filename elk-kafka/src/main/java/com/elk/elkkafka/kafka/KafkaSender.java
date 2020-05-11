@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 
+import javax.annotation.Resource;
+
 /**
  * @Auther: Mr.Kong
  * @Date: 2020/5/8 14:17
@@ -19,7 +21,7 @@ import org.springframework.util.concurrent.ListenableFutureCallback;
 @Slf4j
 public class KafkaSender<T> {
 
-    @Autowired
+    @Resource
     private KafkaTemplate<String, Object> kafkaTemplate;
 
     @Value("${kafka.topic}")

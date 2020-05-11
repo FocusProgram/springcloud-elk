@@ -19,7 +19,7 @@ services:
       - ./mysql/mysql-connector-java-5.1.46.jar:/mysql-connector-java-5.1.46.jar
     external_links:
       - elasticsearch:elasticsearch
-    command: bash -c "chmod +x /data && logstash -f logstash_kafka.conf --path.data=/data"
+    command: bash -c "chmod +x /data && logstash -f /config/logstash_kafka.conf --path.data=/data"
         
 networks:
   default:

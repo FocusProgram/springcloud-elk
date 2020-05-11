@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * @Auther: Mr.Kong
  * @Date: 2020/5/8 15:05
- * @Description:
+ * @Description: indexName指定es对应索引名，type指定数据类型
  */
 @Document(indexName = "product", type = "product")
 @Data

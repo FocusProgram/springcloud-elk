@@ -16,7 +16,7 @@ services:
       - ./config:/config
       - ./patterns:/opt/logstash/patterns
       - ./logs/tomcat.logs:/logs/tomcat.logs
-      - ./java/mysql-connector-java-5.1.46.jar:/mysql-connector-java-5.1.46.jar
+      - ./mysql/mysql-connector-java-5.1.46.jar:/mysql-connector-java-5.1.46.jar
     external_links:
       - elasticsearch:elasticsearch
     command: bash -c "chmod +x /data && logstash -f /config/mysql_tables.conf --path.data=/data"

@@ -1,5 +1,7 @@
 package com.elk.elkes;
 
+import com.elk.elkcache.annotation.EnableCache;
+import com.elk.elkkafka.annotation.EnableElk;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
