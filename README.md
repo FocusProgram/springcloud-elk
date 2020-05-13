@@ -39,7 +39,7 @@
 
 # 1. ELK搭建详细教程参考
 
-[ELK详解文档](https://github.com/FocusProgram/springcloud-elk/blob/master/docs/ELK.md)
+[ELK详解文档](https://github.com/FocusProgram/springcloud-elk/blob/master/docs/ELK详解.md)
 
 # 2. ELK-Kafka分布式日志收集架构设计
 

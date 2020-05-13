@@ -39,6 +39,8 @@
 
 # 1. ELK搭建详细教程参考
 
+[ELK详解文档](https://github.com/FocusProgram/springcloud-elk/blob/master/docs/ELK详解.md)
+
 # 2. ELK-Kafka分布式日志收集架构设计
 
 > 使用SpringAop进行日志收集，然后通过kafka将日志发送给logstash，logstash再将日志写入elasticsearch，这样elasticsearch就有了日志数据了，最后，则使用kibana将存放在elasticsearch中的日志数据显示出来，并且可以做实时的数据图表分析等等。
