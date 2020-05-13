@@ -1,6 +1,6 @@
 <font size=4.5>
 
-**ELK分布式日志收集分析**
+**ELK-Kafka分布式日志收集**
 
 ---
 
@@ -39,7 +39,7 @@
 
 # 1. ELK搭建详细教程参考
 
-[ELK详细安装文档](https://github.com/FocusProgram/springcloud-elk/blob/master/docs/ELK.md)
+[ELK详解文档](https://github.com/FocusProgram/springcloud-elk/blob/master/docs/ELK.md)
 
 # 2. ELK-Kafka分布式日志收集架构设计
 
